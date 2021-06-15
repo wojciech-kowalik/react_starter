@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@routes": ["./src/routes.ts"],
+      "@constants": ["./src/constants.ts"],
+      "@types": ["./src/types.ts"],
+      "@contracts": ["./src/contracts/index.ts"],
+      "@layout/*": ["./src/ui/layout/*"],
+      "@api": ["./src/data/api/index.ts"],
+      "@fake-api/*": ["./src/fake-api/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@errors/*": ["./src/data/errors/*"],
+      "@utils/*": ["./src/utils/*"]
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"]
+}

@@ -1,0 +1,103 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "scripts": {
+    "build": "webpack --mode production --env prod",
+    "start": "NODE_ENV=development webpack-cli serve --env development",
+    "test": "jest",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "@material-ui/core": "4.11.2",
+    "@material-ui/icons": "4.11.2",
+    "@material-ui/lab": "4.0.0-alpha.57",
+    "clsx": "1.1.1",
+    "css-loader": "5.0.1",
+    "date-fns": "2.16.1",
+    "lodash": "4.17.20",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-router-dom": "5.2.0",
+    "styled-components": "5.2.1",
+    "uuid": "8.3.2",
+    "zod": "1.11.11"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "7.29.4",
+    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/react": "11.2.3",
+    "@testing-library/user-event": "12.6.0",
+    "@types/jest": "26.0.20",
+    "@types/lodash": "4.14.168",
+    "@types/material-ui": "0.21.8",
+    "@types/mocha": "8.2.0",
+    "@types/react": "17.0.0",
+    "@types/react-dom": "17.0.0",
+    "@types/react-modal": "3.10.6",
+    "@types/react-router-dom": "5.1.7",
+    "@types/styled-components": "5.1.7",
+    "@types/uuid": "8.3.0",
+    "@types/webpack": "4.41.26",
+    "@types/webpack-dev-server": "3.11.1",
+    "@typescript-eslint/eslint-plugin": "4.14.0",
+    "@typescript-eslint/parser": "4.14.0",
+    "autoprefixer": "10.2.1",
+    "clean-webpack-plugin": "3.0.0",
+    "cross-fetch": "3.0.6",
+    "eslint": "7.18.0",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "html-webpack-plugin": "5.0.0-alpha.14",
+    "html-webpack-template": "6.2.0",
+    "husky": "4.3.0",
+    "identity-obj-proxy": "3.0.0",
+    "idx": "2.5.0",
+    "intl": "1.2.5",
+    "jest": "26.6.3",
+    "jest-each": "26.6.2",
+    "jest-fetch-mock": "3.0.3",
+    "lint-staged": "10.5.3",
+    "msw": "0.24.0",
+    "postcss-loader": "4.1.0",
+    "prettier": "2.2.0",
+    "pretty-quick": "3.1.0",
+    "serve": "11.3.2",
+    "style-loader": "2.0.0",
+    "tailwindcss": "2.0.2",
+    "ts-jest": "26.4.4",
+    "ts-loader": "8.0.11",
+    "ts-node": "9.1.0",
+    "tsconfig-paths": "3.9.0",
+    "tsconfig-paths-jest": "0.0.1",
+    "tsconfig-paths-webpack-plugin": "3.3.0",
+    "typescript": "4.1.2",
+    "utility-types": "3.10.0",
+    "webpack": "5.11.1",
+    "webpack-cli": "4.3.1",
+    "webpack-dev-server": "3.11.1"
+  },
+  "name": "react_starter",
+  "version": "0.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/wojciech-kowalik/react_starter.git",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "pretty-quick --staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,md,scss}": "prettier --write",
+    "src/**/*.{js,jsx,ts,tsx}": "eslint"
+  },
+  "eslintIgnore": [
+    "dist/*"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
+}
